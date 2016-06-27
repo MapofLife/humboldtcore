@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <i class="fa fa-close close" ng-click="close()"></i>
+    <h3 class="modal-title" ng-bind-html="modal.title"></h3>
+</div>
+<div class="modal-body">
+  <div class="panel panel-default" ng-repeat="item in modal.items">
+      <div ng-show="modal.items.length>1" class="panel-heading metadata_heading"
+        ng-click="modal.selectedItem = $index;" ng-bind-html="item.title"></div>
+      <div ng-show = "modal.selectedItem === $index || modal.items.length ==1">
+        <li class="list-group-item"  ng-repeat="entry in item.items">
+          <strong ng-bind-html="entry.label"></strong>:
+          <span ng-bind-html="entry.value"></span>
+        </li>
+      </div>
+  </div>
+</div>

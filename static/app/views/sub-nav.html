@@ -1,0 +1,32 @@
+ <div class="navigation">
+
+    <div class="navbar navbar-default" >
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+              ng-click="snc=!snc" >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="subnav navbar-collapse collapse container-fluid" uib-collapse='!snc' >
+            <ul class="nav navbar-nav">
+              <li ui-sref-active="active"
+                 ui-sref="humboldtcore.home"><a href="#">Humboldt Core Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav visible-xxxs visible-xxs">
+                <li>
+                    <a  class="selected">
+                       <i class="fa fa-info"></i>Species Info</a>
+                </li>
+                <li>
+                    <a ng-href="http://map.mol.org/lists">
+                        <i class="fa fa-list-ol icon"></i>Species Lists by Location</a>
+                </li>
+            </ul>
+            <mol-species-search ng-show="!$state.params.nospeciesselect"></mol-species-search>
+
+          </div>
+
+</div>

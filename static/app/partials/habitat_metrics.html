@@ -1,0 +1,81 @@
+<div class="row">
+            <div class="col-md-12">
+        <div ng-class="{'disabled':stale||processing}" class="metrics">
+            <div class="row metric" ng-show="species.habitat.refined_f">
+                <div class="col-md-6">
+                    <div class="name">
+                        Refined map performance
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value">
+                        {{species.habitat.refined_f}}&nbsp;%&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="row metric" ng-show="species.habitat.f_change">
+                <div class="col-md-6">
+                    <div class="name">
+                        Change in map performance
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value">
+                        {{species.habitat.f_change}}&nbsp;%&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="row metric" ng-show="species.habitat.sensitivity_change">
+                <div class="col-md-6">
+                    <div class="name">
+                        Change in sensitivity
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value">
+                        {{species.habitat.sensitivity_change | percentage}}
+                    </div>
+                </div>
+            </div>
+            <div class="row metric" ng-show="species.habitat.num_points">
+                <div class="col-md-6">
+                    <div class="name">
+                        Validation points
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value">
+                        {{species.habitat.num_points}}&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="row metric" ng-show="species.habitat.habitat_pts_ct">
+                <div class="col-md-6">
+                    <div class="name">
+                        Validation points in suitable habitat
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value">
+                        {{species.habitat.habitat_pts_ct}}&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="row metric">
+                <div class="col-md-6">
+                    <div class="name">
+                        Suitable habitat change 2001 - 2012
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="value">
+                        {{species.habitat.percent_change/100 | number : 2 | percentage}}
+                         <span ng-show="species.habitat.percent_change_conf">({{species.habitat.percent_change_conf[0] | number : 2}}, {{species.habitat.percent_change_conf[1] | number : 2}} )
+                            <span ng-repeat="stars in stars(species.habitat.b1_p)">*</span>
+                        </span>&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

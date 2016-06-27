@@ -1,0 +1,35 @@
+
+<script type="text/ng-template" id="logo.tpl.html" ng-controller="molSpeciesCtrl">
+  <a style="background-color:none;" class="map-link"
+    ng-href="https://mol.org/species/{{$root.$state.params.scientificname}}"
+      target="_blank">
+    <img src="static/app/img/logo.png">
+  </a>
+</script>
+<ui-gmap-google-map
+    class="partials-map"
+    center="map.center"
+    zoom="map.zoom"
+    bounds="map.bounds"
+    events="map.events"
+    options="map.options"
+    control="map.control"
+    pan="true">
+    <ui-gmap-map-type
+        options="mt"
+        show="mt.show"
+        refresh="mt.refresh"
+        ng-repeat="mt in map.overlayMapTypes">
+    </ui-gmap-map-type>
+    <ui-gmap-window
+        show="map.infowindow.show"
+        coords="map.infowindow.coords"
+        options="map.infowindow.options"
+        templateUrl="map.infowindow.templateUrl"
+        templateParameter="map.infowindow.model"
+        ></ui-gmap-window>
+        <ui-gmap-map-control
+          template="logo.tpl.html" position="bottom-left" index="10000">
+
+        </ui-gmap-map-control>
+</ui-gmap-google-map>

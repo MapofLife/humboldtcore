@@ -1,0 +1,19 @@
+<div class="col-md-8">
+    <div ng-include="'static/partials/tax.html'"></div>
+</div>
+<div class="col-md-4">
+<div class="top_buttons">
+    <button rel="tooltip" title="" class="btn btn-default" type="button" ng-click="learnMore();"
+        data-original-title="Learn about how to use this tool."
+            tooltip="{{ tt_learnmore_button }}" tooltip-placement="left">
+       Learn more
+    </button>
+</div><div class="top_buttons">
+<button rel="tooltip" title=""  ng-click="updatePrefs();"
+                ng-class="{stale: stale}"
+                class="btn btn-default"
+                data-original-title="Update maps and stats using the selected elevation and habitat preferences."
+                    tooltip="{{ tt_rerun_button }}" tooltip-placement="left">
+                Update
+            </button></div>
+</div>
