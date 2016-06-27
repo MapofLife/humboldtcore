@@ -19,7 +19,7 @@ footer {
 }
 
 
-.layouts-base {
+.layouts-base .scrolling {
   min-height: 50%;
   display: -webkit-flex;
   display: flex;
@@ -28,6 +28,10 @@ footer {
   flex-direction: column;
   -webkit-flex-direction: column;
   overflow-y:auto;
+}
+
+.layouts-base .static {
+  display:block
 }
 
 .layouts-base.content {

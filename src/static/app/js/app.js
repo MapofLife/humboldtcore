@@ -4,27 +4,10 @@
 angular.module('mol.controllers',[]);
 
 angular.module('mol', [
-  'ngSanitize',
-  'ngCookies',
-  'ngAnimate',
-  'ngTouch',
-  'mol.api',
-  'mol.filters',
-  'mol.services',
-  'mol.controllers',
-  'mol.loading-indicator',
   'ui.bootstrap',
   'ui.router',
-  'percentage',
-  'km2',
-  'angular-loading-bar',
+  'mol.filters'
 ])
-.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
-    cfpLoadingBarProvider.includeSpinner = false;
-    cfpLoadingBarProvider.includeBar = false;
-    //cfpLoadingBarProvider.includeBar = false;
-    cfpLoadingBarProvider.latencyThreshold = 100;
-  }])
 .config(function($sceDelegateProvider,$stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
   $sceDelegateProvider.resourceUrlWhitelist([
@@ -41,13 +24,14 @@ angular.module('mol', [
 
   $stateProvider
     .state(
-      'humboldtcore', //this view contains the bones of the Species Info pages (name, pic, & search bar)
+      'humboldtcore',
       {
+
         abstract: true,
         views: {
           "": {
-            templateUrl: 'static/app/layouts/base-scrolling.html',
-            controller: 'molHumboldtCoreCtrl'},
+            templateUrl: 'static/app/layouts/base-static.html'},
+            //controller: 'molHumboldtCoreCtrl'},
           "@humboldtcore" : {
             templateUrl: 'static/app/layouts/basic.html'
           }
@@ -62,7 +46,7 @@ angular.module('mol', [
         views: {
           "content@humboldtcore" :{
             templateUrl: "static/app/views/home/index.html",
-            controller: 'molHumboldtCoreHomeCtrl'
+            //controller: 'molHumboldtCoreHomeCtrl'
           }
         },
         url: '/'
