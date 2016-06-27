@@ -4,7 +4,7 @@
 angular.module('mol.controllers',[]);
 
 angular.module('mol', [
-  'ui.bootstrap',
+  //'ui.bootstrap',
   'ui.router',
   'mol.filters'
 ])
