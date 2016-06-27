@@ -1,0 +1,15 @@
+#Routes for development
+
+handlers:
+- url: /species/static
+  static_dir: modules/species/src/static
+
+- url: /species/.*
+  static_files: modules/species/src/index.html
+  upload: modules/species/src/index.html
+  expiration: "15m"
+
+- url: /species/
+  static_files: modules/species/src/index.html
+  upload: modules/species/src/index.html
+  expiration: "15m"

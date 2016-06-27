@@ -1,0 +1,11 @@
+logs/*
+!.gitkeep
+**/node_modules/
+**/components/*
+tmp
+.DS_Store
+*.pyc
+.idea
+config.py
+privatekey.pem
+config_creds.py

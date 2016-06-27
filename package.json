@@ -1,0 +1,26 @@
+{
+  "name": "MOL-Humboldt-Core-Pages",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Pages for Humboldt Core",
+  "repository": "git@github.com:MapofLife/humboldtcore.git",
+  "url": "mapoflife.github.io/humboldtcore/",
+  "base": "humboldtcore",
+  "license": "MIT",
+  "directory": "static/components/",
+  "devDependencies": {
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "grunt": "^0.4.1",
+    "grunt-build-control": "^0.7.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-dom-munger": "~3.4.0",
+    "grunt-express": "~1.4.1",
+    "grunt-keepalive": "~1.0.0",
+    "grunt-open": "~0.2.3",
+    "grunt-parallel": "^0.5.1"
+  }
+}

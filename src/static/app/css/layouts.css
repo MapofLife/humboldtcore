@@ -1,0 +1,211 @@
+/* base layout */
+html {height:100%;width: 100%;}
+body {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  height:100%;
+  width:100%;;
+}
+
+header {
+  overflow: inherit;
+}
+
+footer {
+  display: block;
+  position: inherit;
+}
+
+
+.layouts-base {
+  min-height: 50%;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  -webkit-flex: 1;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  overflow-y:auto;
+}
+
+.layouts-base.content {
+  margin: 0;
+  padding: 0;
+}
+
+
+.layouts-base .google-map-canvas, .google-map-canvas * { .box-sizing(content-box); }
+
+
+/* navbar override */
+
+.layouts-base .navigation { display:inline-block; }
+.layouts-base .navbar { background-color: #8cbf44}
+.layouts-base .navbar .subnav {overflow: hidden}
+
+
+/* map with lefthand sidebar */
+
+.layouts-map-with-sidebars {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  align-items: stretch;
+}
+
+.layouts-map-with-sidebars .sidebar-scroll-container {
+  position: relative;
+  max-width: 90%;
+  border: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+.layouts-map-with-sidebars .sidebar-scroll-container {
+  position: relative;
+  max-width: 90%;
+  border: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition:all 0.7s ease;
+}
+
+.layouts-map-with-sidebars .closed {
+  max-width:0;
+  padding: 0;
+  overflow: hidden;
+  transition:all 0.7s ease;
+}
+
+.layouts-map-with-sidebars .sidebar-toggle.right.toggle-closed  {
+  right: 0px;
+}
+
+.sidebar-toggle {
+  position:absolute;
+  z-index:  1000;
+  top: 50%;
+  bottom: 50%;
+  width: 40px;
+  height:40px;
+  margin: auto;
+  padding:10px;
+  color: #555555;
+  background-color: white;
+  border-bottom: 1pt solid grey;
+  border-top: 1pt solid grey;
+}
+.sidebar-toggle.right {
+  right: 290px;
+  border-left: 1pt solid grey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+.sidebar-toggle.left {
+  border-right: 1pt solid grey;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.layouts-map-with-sidebars .sidebar {
+
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right:0px;
+  background-color: white;
+  font-size: 10pt;
+  max-width: 100%;
+  padding: 15px;
+  min-width: 290px;
+  width: 600px;
+  max-width: 100%;
+
+
+}
+
+.layouts-map-with-sidebars .map-container {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.layouts-map-with-sidebars .map-container {
+  display: flex;
+  display: -webkit-flex;
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.layouts-map-with-sidebars  .angular-google-map {
+      display: -webkit-flex;
+      display: flex;
+      flex: 1;
+      -webkit-flex: 1;
+      .google-map-canvas, .google-map-canvas * { .box-sizing(content-box); }
+
+      /* Optional responsive image override */
+      img { max-width: none; }
+}
+
+.layouts-map-with-sidebars .angular-google-map .angular-google-map-container {
+      -webkit-flex: 1;
+      flex: 1;
+      border-right: 0.5pt solid grey;
+      border-left: 0.5pt solid grey;
+
+  }
+
+.layouts-map-with-sidebars mol-loading-indicator {
+  position: absolute;
+  left: 50%;
+  top; 10px;
+}
+
+/* text wrap with map on top right */
+
+.layouts-map-wrap-right .map {
+  float:right;
+  position: relative;
+  margin: 10px;
+  width:600px;
+  height:400px;
+  max-width:95%;
+}
+.layouts-map-wrap-right .google-map .angular-google-map-container{
+  width:600px;
+  height:400px;
+}
+
+/* put in partials css */
+a.map-link:hover {
+  background-color:inherit;
+}
+
+.map-link img {
+  height: 26px;
+
+
+}
+
+.partials-map a:link {
+  padding: 0;
+}
+
+
+/* Humboldt Core styles */
+.content-container {
+  margin-top: 40px;
+}
+
+p img {
+  margin: 20px auto;
+}
