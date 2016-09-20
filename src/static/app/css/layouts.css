@@ -208,6 +208,7 @@ a.map-link:hover {
 /* Humboldt Core styles */
 .content-container {
   margin-top: 40px;
+  padding-bottom: 80px;
 }
 
 p img {
